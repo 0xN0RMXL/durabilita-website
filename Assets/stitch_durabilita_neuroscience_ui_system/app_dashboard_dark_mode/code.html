@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Durabilita - Neural Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "primary": "#ae3200",
+                        "primary-fixed": "#ffdbd0",
+                        "primary-container": "#ff5a1f",
+                        "on-tertiary-fixed": "#001e30",
+                        "dark-surface-neural": "#1E1E1E",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-container": "#612000",
+                        "medical-gray": "#D9D9D6",
+                        "outline": "#8f7067",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-tint": "#ae3200",
+                        "on-secondary": "#ffffff",
+                        "deep-neural-gray": "#5C5C5C",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#852400",
+                        "tertiary-fixed-dim": "#8ecdff",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#cbe6ff",
+                        "secondary-fixed": "#ffdbcd",
+                        "neural-glow": "#FF7A3D",
+                        "primary-fixed-dim": "#ffb59e",
+                        "dark-accent-glow": "#FF8F5A",
+                        "clinical-white": "#F7F7F5",
+                        "inverse-primary": "#ffb59e",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#541400",
+                        "outline-variant": "#e4beb3",
+                        "inverse-surface": "#303030",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#009ae1",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e5e2e1",
+                        "neural-orange": "#FF5A1F",
+                        "on-surface": "#1b1c1c",
+                        "on-surface-variant": "#5b4038",
+                        "on-tertiary": "#ffffff",
+                        "graphite-black": "#222222",
+                        "on-tertiary-container": "#002e47",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary": "#a53c00",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#3a0b00",
+                        "tertiary": "#006494",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fb773a",
+                        "dark-bg-deep-space": "#111111",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#004b71",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed": "#360f00",
+                        "secondary-fixed-dim": "#ffb598",
+                        "on-secondary-fixed-variant": "#7e2c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "metadata": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "metadata": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-dark-bg-deep-space text-clinical-white min-h-screen pb-24 antialiased selection:bg-neural-orange/30">
+<!-- TopNavBar (Mobile App Shell) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto bg-dark-bg-deep-space/80 backdrop-blur-md shadow-none md:hidden">
+<div class="font-headline-md text-neural-glow tracking-tight font-bold">DURABILITA</div>
+<button aria-label="Search" class="text-clinical-white hover:text-neural-glow transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-margin-mobile flex flex-col gap-stack-lg max-w-md mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center gap-stack-md mt-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-neural-orange leading-tight uppercase tracking-tight w-full max-w-[300px]">
+                VITALITY<br/>STARTS AT THE<br/>SYNAPSE.
+            </h1>
+<div class="w-full bg-dark-surface-neural rounded-xl p-6 shadow-[0_8px_32px_rgba(255,90,31,0.05)] border border-outline-variant/10 flex flex-col items-center justify-center relative overflow-hidden mt-2">
+<!-- Ambient Glow Behind Product -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,143,90,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+<img alt="Durabilita Supplement Packaging" class="w-full h-auto object-contain rounded-lg relative z-10 mix-blend-lighten opacity-90" data-alt="A sleek, minimalist clinical supplement box floating in a deep space black void. Beside the box, a highly detailed, glowing orange 3D render of a single neuron with radiating dendrites pulses with soft light. The aesthetic is premium biotech, high-end medical software dark mode, featuring stark contrasts between the deep #111111 background and the intense #FF8F5A neural glow. High resolution, dramatic clinical lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWCPn1cWGu-Qpz4gbRSHli2Or3mnd9NcOh4S0okiPXkBNt2xL90wqN7aVx9WifXYQ9Eb9go-0fAR6xg9x1gfYrlHelAZ1SdjzN8FLv63sMQ-1CKbCsuux_V5dq5CVyLm9mlsPBD8ymRUm9bgvYhWlXs2ecrHn2HPCBumvYabcYxDC8ddyJloFysb64aTDdfUlcP2JhWozHJDPlLNmkwNPe8D-wM5ti9o3xQgIYprOPnhC496XkqqmAwfKugsZo0IvSl96kkfQUjEx"/>
+</div>
+<p class="font-body-md text-body-md text-deep-neural-gray max-w-[280px] mt-4">
+                Discover the new clinical standard in neurological longevity and premium daily wellness.
+            </p>
+</section>
+<!-- Dashboard Quick Stats (Bento layout adaptation) -->
+<section class="grid grid-cols-2 gap-stack-sm w-full">
+<div class="bg-dark-surface-neural p-4 rounded-lg flex flex-col gap-2 shadow-sm border border-outline-variant/5 hover:border-neural-orange/30 transition-colors">
+<div class="flex items-center gap-2 text-deep-neural-gray">
+<span class="material-symbols-outlined text-[18px]" data-icon="psychology">psychology</span>
+<span class="font-metadata text-metadata uppercase tracking-wider">Neural State</span>
+</div>
+<div class="font-headline-md text-headline-md text-clinical-white">Optimal</div>
+</div>
+<div class="bg-dark-surface-neural p-4 rounded-lg flex flex-col gap-2 shadow-sm border border-outline-variant/5 hover:border-neural-orange/30 transition-colors">
+<div class="flex items-center gap-2 text-deep-neural-gray">
+<span class="material-symbols-outlined text-[18px]" data-icon="water_drop">water_drop</span>
+<span class="font-metadata text-metadata uppercase tracking-wider">Protocol</span>
+</div>
+<div class="font-headline-md text-headline-md text-clinical-white">2 / 3 <span class="text-sm text-deep-neural-gray font-normal">doses</span></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile App Shell) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-dark-bg-deep-space/90 backdrop-blur-lg rounded-t-xl shadow-[0_-4px_24px_rgba(0,0,0,0.8)] border-t border-dark-surface-neural">
+<!-- Active Item: Home -->
+<button aria-label="Home" class="flex flex-col items-center justify-center text-neural-glow scale-110 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="home_health" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home_health</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</button>
+<button aria-label="Track" class="flex flex-col items-center justify-center text-deep-neural-gray opacity-60 hover:opacity-100 hover:text-clinical-white transition-all">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-label-sm text-label-sm mt-1">Track</span>
+</button>
+<button aria-label="Shop" class="flex flex-col items-center justify-center text-deep-neural-gray opacity-60 hover:opacity-100 hover:text-clinical-white transition-all">
+<span class="material-symbols-outlined" data-icon="local_pharmacy">local_pharmacy</span>
+<span class="font-label-sm text-label-sm mt-1">Shop</span>
+</button>
+<button aria-label="Profile" class="flex flex-col items-center justify-center text-deep-neural-gray opacity-60 hover:opacity-100 hover:text-clinical-white transition-all">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

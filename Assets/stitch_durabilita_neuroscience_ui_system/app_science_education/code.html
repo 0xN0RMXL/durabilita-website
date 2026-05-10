@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Durabilita - Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "primary": "#ae3200",
+                        "primary-fixed": "#ffdbd0",
+                        "primary-container": "#ff5a1f",
+                        "on-tertiary-fixed": "#001e30",
+                        "dark-surface-neural": "#1E1E1E",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-container": "#612000",
+                        "medical-gray": "#D9D9D6",
+                        "outline": "#8f7067",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-tint": "#ae3200",
+                        "on-secondary": "#ffffff",
+                        "deep-neural-gray": "#5C5C5C",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#852400",
+                        "tertiary-fixed-dim": "#8ecdff",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#cbe6ff",
+                        "secondary-fixed": "#ffdbcd",
+                        "neural-glow": "#FF7A3D",
+                        "primary-fixed-dim": "#ffb59e",
+                        "dark-accent-glow": "#FF8F5A",
+                        "clinical-white": "#F7F7F5",
+                        "inverse-primary": "#ffb59e",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#541400",
+                        "outline-variant": "#e4beb3",
+                        "inverse-surface": "#303030",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#009ae1",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e5e2e1",
+                        "neural-orange": "#FF5A1F",
+                        "on-surface": "#1b1c1c",
+                        "on-surface-variant": "#5b4038",
+                        "on-tertiary": "#ffffff",
+                        "graphite-black": "#222222",
+                        "on-tertiary-container": "#002e47",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary": "#a53c00",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#3a0b00",
+                        "tertiary": "#006494",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fb773a",
+                        "dark-bg-deep-space": "#111111",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#004b71",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed": "#360f00",
+                        "secondary-fixed-dim": "#ffb598",
+                        "on-secondary-fixed-variant": "#7e2c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "metadata": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "metadata": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col pb-safe lg:pb-0">
+<!-- Top Navigation (Web) -->
+<nav class="hidden md:flex bg-clinical-white/80 dark:bg-dark-bg-deep-space/80 backdrop-blur-md font-headline-md text-headline-md font-label-sm text-label-sm docked full-width top-0 bg-surface-container-low/50 dark:bg-dark-surface-neural/50 shadow-sm shadow-sm dark:shadow-none fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-primary tracking-tight font-bold dark:text-neural-glow" href="#">DURABILITA</a>
+<div class="flex gap-6">
+<a class="text-primary dark:text-neural-glow font-bold border-b-2 border-primary dark:border-neural-glow pb-1 hover:opacity-80 transition-all duration-300" href="#">Science</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors hover:opacity-80 transition-all duration-300" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors hover:opacity-80 transition-all duration-300" href="#">Insights</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors hover:opacity-80 transition-all duration-300" href="#">Protocol</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-neural-orange text-on-primary font-label-sm text-label-sm px-6 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow">Get Started</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[80px] lg:pt-[100px]">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-stack-lg text-center mt-stack-lg lg:mt-section-gap">
+<h1 class="font-display-hero text-display-hero text-neural-orange mb-stack-md uppercase leading-[0.9]">
+                Vitality<br/>Starts at the<br/>Synapse.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Discover the new clinical standard in neurological longevity and premium daily wellness.
+            </p>
+</section>
+<!-- Product Render Showcase -->
+<section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-section-gap">
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-sm overflow-hidden relative min-h-[500px] flex items-center justify-center p-stack-lg">
+<img alt="Durabilita Product Render" class="w-full max-w-lg object-contain relative z-10 drop-shadow-xl" data-alt="A highly detailed 3D render of a minimalist, luxury pharmaceutical product box labeled 'DURABILITA'. The box is pristine white with crisp, clinical typography in deep red and orange. Beside the box is a stylized, glowing orange 3D model of a neuron, representing scientific innovation. The lighting is bright, sterile, and professional, characteristic of high-end medical marketing materials on a clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDoIyZsYgqc0RVwUAIBTD872Kf-eCV160eLWkw4mCaQ5dBMPuuhzMKgaEOBES-MUoipcu7p1ZscSSdM_zgmkhsGh7-aQ4W2xklpq1nAFjvdXcgIVo7vounDmvgPRY7iwu1HRcnpQW3diMC3M-3aADUVkl7wNBigoXiT0K7HyFOXIf2c2MGo8J2PgxvF7YfefjhgIUomJCskb22p9E1wKhgsd8BgyDIHvKYBgn-Pjv6F7MDUXuPUG1b_-GvEd6O6aJhsCMWKoy50MWJ"/>
+<!-- Ambient Background Glows -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary-fixed/30 rounded-full blur-3xl -z-0"></div>
+</div>
+</section>
+<!-- Bento Grid: Science Components -->
+<section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<!-- Core Ingredient Card -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest p-stack-lg rounded-xl border border-surface-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-stack-md text-primary">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Active Compound</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-stack-sm">Cognitive Matrix 01</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md max-w-md">
+                            Our proprietary blend utilizes bio-available neuro-peptides designed to cross the blood-brain barrier efficiently, supporting synaptic plasticity and sustained focus.
+                        </p>
+</div>
+<div class="mt-stack-lg">
+<img alt="Science Beaker" class="w-full h-48 object-cover rounded-lg" data-alt="Macro photography of a crystal clear scientific beaker filled with a glowing, vibrant orange liquid. The liquid is highly viscous and pure, illuminated from beneath to show its clinical clarity. The background is a stark, minimal laboratory setting with soft, diffused white lighting emphasizing the high-tech, premium nature of the substance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48CLmF7hhC39ut8QIEpoJQzRylhObvG9m5ClhANxeI6Y79jHklwdiBk1sLvJZZImrbhdVpFDXgpg0LTbuGs6OKeq-yTyOX_cTiwpEKOCNG9aL05dR0sLswhappO1cvPCs8SV4AjwonTA78GhUCFofIbSOUAEDrm_peFeZgAnC7_d1xSCDOqOGRf9zH2A-D52ZZ696c9964YTfE9ktjOnso5YJVLrGR2cBI9JMG5yUTXkztpceJHq4Ny66gIpLc3wgGfl_nRV9PSA_"/>
+</div>
+</div>
+<!-- Neural Pathway Card -->
+<div class="col-span-1 bg-surface-container-lowest p-stack-lg rounded-xl border border-surface-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-stack-md text-neural-orange">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Pathway</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Synaptic Health</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Targeting key neurotransmitter receptors to optimize signal transmission speed and durability under stress.
+                        </p>
+</div>
+<div class="mt-stack-lg bg-surface-container rounded-lg p-stack-md flex items-center justify-center h-32">
+<!-- Abstract Representation of a chart/data -->
+<div class="w-full h-full flex items-end justify-between gap-2">
+<div class="w-1/5 bg-primary-fixed rounded-t-sm h-1/3"></div>
+<div class="w-1/5 bg-primary-fixed-dim rounded-t-sm h-1/2"></div>
+<div class="w-1/5 bg-primary-container rounded-t-sm h-3/4"></div>
+<div class="w-1/5 bg-neural-orange rounded-t-sm h-full"></div>
+</div>
+</div>
+</div>
+<!-- Clinical Studies Card -->
+<div class="col-span-1 md:col-span-3 bg-clinical-white p-stack-lg rounded-xl border border-surface-variant shadow-sm flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="flex-1">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-stack-md">Backed by rigorous clinical trials.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                            Double-blind, placebo-controlled studies confirm a 42% increase in sustained attention span over a 12-week period.
+                        </p>
+<button class="flex items-center gap-2 text-primary font-label-sm text-label-sm border border-outline-variant px-6 py-3 rounded-full hover:bg-surface-container transition-colors">
+                            View Full Methodology <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/3 aspect-square bg-surface-container-high rounded-lg flex items-center justify-center p-stack-md relative overflow-hidden">
+<img alt="Microscope" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A modern, high-tech microscope in a pristine clinical laboratory setting. The lighting is cool, bright, and sterile white. The focus is on the precision lenses of the microscope, suggesting rigorous scientific analysis and premium medical research. The depth of field is shallow, blurring the clean laboratory background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvCBf8Ib0yGgNJrJ0qwgrFqsh3ZYLN4ewJsok52i_K9AYC6DK40amjuZDd_POqkzvYAHFNssfullMbzc-ak8Q-EBntrevvN1Z8bSIBtlv5qXFG_-Ua3pjKDeuAG9sRFvxugROhW73JGsPrqkXv0NqgeOyH54Z4afHRgkEYzB8TtlOFdKoLK3lGbmk9ZjHIgYPt5uG2uM--3itycO_gG9pB1iHeA6lbsNIEhs6-710kEKlyiE_bRkYaKtzddy9dChgf_gfItu_zvSx"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="lg:hidden bg-clinical-white/90 dark:bg-dark-bg-deep-space/90 backdrop-blur-lg font-label-sm text-label-sm hidden docked full-width bottom-0 rounded-t-xl bg-surface-container-highest/20 dark:bg-dark-surface-neural/50 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] shadow-lg active:bg-primary-fixed/20 lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-deep-neural-gray opacity-60 hover:opacity-80 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">home_health</span>
+<span class="mt-1 text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-deep-neural-gray opacity-60 hover:opacity-80 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span class="mt-1 text-[10px] font-medium tracking-wide">Track</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-neural-glow scale-110 hover:opacity-80 transition-all duration-300" href="#">
+<span class="material-symbols-outlined fill">local_pharmacy</span>
+<span class="mt-1 text-[10px] font-medium tracking-wide">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-deep-neural-gray opacity-60 hover:opacity-80 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="mt-1 text-[10px] font-medium tracking-wide">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-clinical-white dark:bg-dark-bg-deep-space font-metadata text-metadata full-width bottom-0 bg-surface-container-low dark:bg-dark-surface-neural shadow-inner flat w-full py-12 px-gutter border-t border-outline-variant/30 dark:border-outline/10 flex flex-col items-center gap-stack-md hidden md:flex">
+<div class="font-headline-md text-primary dark:text-neural-glow font-bold tracking-tight mb-stack-sm">DURABILITA</div>
+<div class="flex gap-6 mb-stack-md">
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors underline-offset-4 hover:underline" href="#">Clinical Studies</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors underline-offset-4 hover:underline" href="#">Sourcing</a>
+<a class="text-on-surface-variant dark:text-deep-neural-gray hover:text-primary dark:hover:text-neural-glow transition-colors underline-offset-4 hover:underline" href="#">Terms</a>
+</div>
+<div class="text-on-surface-variant opacity-70">
+            © 2024 DURABILITA NEUROSCIENCE. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>
